@@ -1,25 +1,46 @@
 public class Main {
+    /*
+    Use the following methods:
+        .length()
+        .substring(start, finish) doesnt include finish
+        .substring(start) goes to the end
+        .indexOf(someString)
+        someString.equals(otherString)
+     */
     public static void main(String[] args) {
         System.out.println(VowelCount("This is a string."));
         System.out.println("Correct output: 4");
+        ///////////////////////////////////////
         System.out.println(VowelRemover("Remove all of the vowels."));
         System.out.println("Correct output: Rmv ll f th vwls");
+        ///////////////////////////////////////
         System.out.println(ContainsSubstring("Sentence","ten"));
         System.out.println("Correct output: true");
+        ///////////////////////////////////////
         System.out.println(ReverseString("ABCDEF"));
         System.out.println("Correct output: FEDCBA");
+        ///////////////////////////////////////
         System.out.println(PalindromeChecker("level"));
         System.out.println("Correct output: true");
     }
 
     /**
-     * Count the vowels in the input string regardless of case
+     * Count the vowels (a,e,i,o,u) in the input string regardless of case
      * @param input String
      * @return vowel count int
      */
     public static int VowelCount(String input){
+        int length = input.length();
+        String lowerCaseInput = input.toLowerCase();
+        int count = 0;
+        for(int i = 0; i < length; i++){
+            String letter = lowerCaseInput.substring(i, i+1);
+            if(letter.equals("a")||letter.equals("e")||letter.equals("i")||letter.equals("o")||letter.equals("u")){
+                count++;
+            }
+        }
 
-        return -1;
+        return count;
     }
 
     /**
