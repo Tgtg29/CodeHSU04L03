@@ -49,8 +49,17 @@ public class Main {
      * @return String with no vowels
      */
     public static String VowelRemover(String input){
+        int length = input.length();
+        String lowerCaseInput = input.toLowerCase();
+        String newString = "";
+        for(int i = 0; i < length; i++){
+            String letter = lowerCaseInput.substring(i,i+1);
+            if(letter.equals("a")||letter.equals("e")||letter.equals("i")||letter.equals("o")||letter.equals("u")){
+                newString = lowerCaseInput.replaceAll("[aeiouAEIOU]", "");
+            }
+        }
 
-        return "";
+        return newString;
     }
 
     /**
