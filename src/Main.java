@@ -69,8 +69,18 @@ public class Main {
      * @return true if target found, false otherwise
      */
     public static boolean ContainsSubstring(String input, String target){
+        if(input.contains(target)){
+            return true;
+        }else{
+            return false;
+        }
+        /*
+        if(target.compareTo(input) == 33){
 
-        return false;
+            return true;
+        }else{
+            return false;
+        }*/
     }
 
     /**
