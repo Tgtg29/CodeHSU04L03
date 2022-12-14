@@ -89,8 +89,12 @@ public class Main {
      * @return reversed input String
      */
     public static String ReverseString(String input){
-
-        return "";
+       String reverse = "";
+        for(int i = input.length() - 1; i>=0; i--){
+            String singleChar = input.substring(i,i+1);
+            reverse = reverse + singleChar;
+        }
+        return reverse;
     }
 
     /**
@@ -100,6 +104,6 @@ public class Main {
      */
     public static boolean PalindromeChecker(String input){
 
-        return false;
+        return input.equals(ReverseString(input));
     }
 }
